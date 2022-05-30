@@ -4,12 +4,12 @@ import Demo from './Component/Demo';
 
 function App() {
 
-  // const person = {
-  //     name: "Amit",
-  //     age: 25
-  // }
+  const person = {
+      name: "Amit",
+      age: 25
+  }
 
-  //   console.log(person.name, person.age);
+    console.log(person.name, person.age);
 
 
 

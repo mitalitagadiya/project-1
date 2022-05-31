@@ -6,7 +6,7 @@ class Demo extends Component {
             <div>
                 <h2>Mitali</h2>
             </div>
-        );
+        );const name = new type(arguments);
     }
 }
 

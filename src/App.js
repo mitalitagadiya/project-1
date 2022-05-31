@@ -53,11 +53,11 @@ function App() {
       <table border="1">
         <tr>
           <th>ID</th>
-          <th>name</th>
-          <th>quantity</th>
-          <th>price</th>
-          <th>expiry</th>
-          <th>status</th>
+          <th>Name</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Expiry</th>
+          <th>Status</th>
         </tr>
         {
           data.map((d,i) => {

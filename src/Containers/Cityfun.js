@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 
 function Cityfun(props) {
 
-    const[CityName, setCityName] = useState('India...');
+    const[CityName, setCityName] = useState('Surat...');
 
     const ChangeCity = () => {
-        setCityName('US...');
+        setCityName('Mumbai...');
     }
 
 

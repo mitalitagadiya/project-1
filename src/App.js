@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import Demo from './Component/Demo';
 import City from './Containers/City';
+import Country from './Containers/City';
 import Cityfun from './Containers/Cityfun';
-import Country from './Containers/Country';
-import Countryfun from './Containers/Countryfun';
+import Countryfun from './Containers/Cityfun';
+import Counterfun from './Containers/Time/Counterfun';
 import Time from './Containers/Time/Time';
 import Timefun from './Containers/Time/Timefun';
 
@@ -63,34 +64,34 @@ import Timefun from './Containers/Time/Timefun';
 // export default Time;
 
 
-
+// import React, { useEffect, useState } from 'react';
 
 // function Timefun(props) {
 
-//   const[Time, setTime] = useState(new Date());
+//         const[Time, setTime] = useState(new Date());
 
-//   const tick = () => {
-//       setTime(new Date());
-//   }
+//         const tick = () => {
+//             setTime(new Date());
+//         }
 
-//   useEffect( () => {
+//         useEffect( () => {
 
-//       // componentDidMount, componentDidupdate
+//             // componentDidMount, componentDidupdate
 
-//       const TimeI = setInterval(() => tick(), 1000);
-      
-//       // componentWillUnmount
+//             const TimeI = setInterval(() => tick(), 1000);
+            
+//             // componentWillUnmount
 
-//       return () => {
-//           clearInterval(TimeI);
-//       }
-//    },[Time]);
+//             return () => {
+//                 clearInterval(TimeI);
+//             }
+//          },[Time]);
 
-// return (
-//   <div>
-//       <p>{Time.toLocaleTimeString()}</p>
-//   </div>
-// );
+//     return (
+//         <div>
+//             <p>{Time.toLocaleTimeString()}</p>
+//         </div>
+//     );
 // }
 
 // export default Timefun;
@@ -102,14 +103,17 @@ import Timefun from './Containers/Time/Timefun';
 //   render() {
 //     return (
 //       <div>
-//         {/* <City />
-//         <Cityfun /> 
-//         <Country /> 
-//         <Countryfun />  */}
-//         {/* <Time /> */}
-//         {/* <Timefun /> */}
+//         <City />
+//         <Cityfun />
+//         <Country />
+//         <Countryfun />
+//         <Time />
+//         <Timefun />
+//         <Counterfun />
 //       </div>
 //     );
 //   }
 // }
 
+
+// export default App;

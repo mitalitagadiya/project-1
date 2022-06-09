@@ -1,119 +1,35 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import Demo from './Component/Demo';
-import City from './Containers/City';
-import Country from './Containers/City';
-import Cityfun from './Containers/Cityfun';
-import Countryfun from './Containers/Cityfun';
-import Counterfun from './Containers/Time/Counterfun';
-import Time from './Containers/Time/Time';
-import Timefun from './Containers/Time/Timefun';
+import Home from './Containers/Home';
+import Loading from './Containers/Loading';
 
 
-// class Time extends Component {
+const HomewithLoading = Loading(Home);
 
-//   constructor(props) {
-//       super(props);
+function App(props) {
 
-//       // 1. Used to set intial value to the component.
+  const [loading, setLoading] = useState(false);
+  const [data, setData] = useState ([ ]);
 
-//       this.state = {
-//           Time: new Date()
-//       }
-//   }
+  const orgData = [
+    {id:101, name:"mitali"},
+    {id:102, name:"ruchika"}
+  ]
 
-//   tick = () => {
-//       this.setState({
-//           Time: new Date()
-//       })
-//   }
+ useEffect(() => {
+   setLoading(true);
+   setTimeout(() =>{setLoading(false); setData(orgData)}, 2000)
+ }
+ ,[])
 
-//   componentDidMount = () => {
+ return(
+   <HomewithLoading
+      isLoading ={loading}
+      data ={data}
+   />
+ )
 
-//       // 3. Used to request date from server.
-
-//       this.TimeI = setInterval(() => this.tick(), 1000);
-//   }
-
-//   componentDidUpdate = (PrevProps, PrevState) => {
-
-//       // 4. called whenever particular state/props update.
-
-//       if (this.state.Time !== PrevState.Time) {
-//           console.log("componentDidUpdate");
-//       }
-//   }
-
-//   componentWillUnmount = () => {
-
-//       // 5. called whenever we move to another component (used to realise the resource).
-
-//       clearInterval(this.TimeI);
-//   }
-
-//   // 2. called whenever state value changed.
-
-//   render() {
-//       return (
-//           <div>
-//               <p>{this.state.Time.toLocaleTimeString()}</p>
-//           </div>
-//       );
-//   }
-// }
-
-// export default Time;
+}
 
 
-// import React, { useEffect, useState } from 'react';
-
-// function Timefun(props) {
-
-//         const[Time, setTime] = useState(new Date());
-
-//         const tick = () => {
-//             setTime(new Date());
-//         }
-
-//         useEffect( () => {
-
-//             // componentDidMount, componentDidupdate
-
-//             const TimeI = setInterval(() => tick(), 1000);
-            
-//             // componentWillUnmount
-
-//             return () => {
-//                 clearInterval(TimeI);
-//             }
-//          },[Time]);
-
-//     return (
-//         <div>
-//             <p>{Time.toLocaleTimeString()}</p>
-//         </div>
-//     );
-// }
-
-// export default Timefun;
-
-
-
-
-// class App extends Component {
-//   render() {
-//     return (
-//       <div>
-//         <City />
-//         <Cityfun />
-//         <Country />
-//         <Countryfun />
-//         <Time />
-//         <Timefun />
-//         <Counterfun />
-//       </div>
-//     );
-//   }
-// }
-
-
-// export default App;
+export default App;
